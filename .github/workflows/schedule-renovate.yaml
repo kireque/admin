@@ -33,7 +33,7 @@ jobs:
           echo "private-key=$private_key" >> "$GITHUB_OUTPUT"
 
       - name: Generate Token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ secrets.KIREQUE_APP_ID }}
