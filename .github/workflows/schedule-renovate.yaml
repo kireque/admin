@@ -69,6 +69,7 @@ jobs:
         uses: renovatebot/github-action@13da59cf7cfbd3bfea72ce26752ed22edf747ce9 # v43.0.2
         env:
           LOG_LEVEL: ${{ inputs.logLevel || 'debug' }}
+          RENOVATE_ALLOWED_COMMANDS: '["npm run bundle"]'
           RENOVATE_DRY_RUN: ${{ inputs.dryRun == true }}
           RENOVATE_AUTODISCOVER: true
           RENOVATE_AUTODISCOVER_FILTER: ${{ github.repository_owner }}/${{ inputs.autodiscover_filter || '*' }}
